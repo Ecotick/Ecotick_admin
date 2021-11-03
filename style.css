@@ -229,7 +229,8 @@ textarea {
   font-family: 'Lacquer', cursive;
   font-size: 1.5rem;
   margin: 50px;
-  
+  padding: 35px 10px;
+  border-radius: 50%;
   border: none;
 }
 

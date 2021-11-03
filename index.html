@@ -17,69 +17,74 @@
 
   <div class="files">
     <div class="file">
-      <label for="commerce">Choisi la photo du commerce:</label>
-      <input type="file" id="commerce" name="commerce" accept="image/png, image/jpeg">
+      <label for="Commercepicturebox">Choisi la photo du commerce:</label>
+      <input type="file" id="Commercepicturebox" name="commerce" accept="image/png, image/jpeg">
     </div>
 
     <div class="file">
-      <label for="logo">Choisi la photo du logo:</label>
-      <input class='inputfile' type="file" id="logo" name="logo" accept="image/png, image/jpeg">
+      <label for="Logopicturebox">Choisi la photo du logo:</label>
+      <input class='inputfile' type="file" id="Logopicturebox" name="logo" accept="image/png, image/jpg">
     </div>
   </div>
 
-  <div class="form">    
+  <div class="form">
+    
+    <!-- <div class="container">
+      <span>&#8520;&#8518;</span> 
+      <input type="text" id="id" placeholder="Id">
+    </div> -->
 
     <div class="container">
       <span>&#9993;</span>
-      <input type="text" class="email" placeholder="Email">
+      <input type="text" id="Emailbox" class="email" placeholder="Email">
     </div>
 
     <div class="container">
       <span>&#9993;</span>
-      <input type="text" placeholder="Email (visible)">
+      <input type="text" id="Emailconfirmbox" placeholder="Email (visible)">
     </div><br>
 
     <div class="container">
       <span>&#8861;</span>
-      <input type="password" placeholder="Mot de passe">
+      <input type="password" id="Passwordbox" placeholder="Mot de passe">
     </div>
 
     <div class="container">
       <span>&#8860;</span>
-      <input type="password" placeholder="Confirmation">
+      <input type="password" id="Passwordconfirmbox" placeholder="Confirmation">
     </div><br>
 
     <div class="container">
       <span style="margin-right: 9px; margin-left: 4px">&#9750;</span>
-      <input type="text" placeholder="Nom du commerce">
+      <input type="text" id="Commercebox" placeholder="Nom du commerce">
     </div><br>
 
     <div class="container">
       <span>&#9786;</span>
-      <input type="text" placeholder="Adresse">
+      <input type="text" id="Adressebox" placeholder="Adresse">
     </div>
 
     <div class="container">
       <span>&#9786;</span>
-      <input type="text" placeholder="Adresse (visible)">
+      <input type="text" id="Adressevisiblebox" placeholder="Adresse (visible)">
     </div><br>
 
     <div class="container">
       <span>&#9743;</span>
-      <input type="number" placeholder="Téléphone">
+      <input type="number" id="Telbox" placeholder="Téléphone">
     </div><br>
 
     <div class="container">
       <span>&#10155;</span> 
-      <input type="text" placeholder="Web site">
+      <input type="text" id="Webbox" placeholder="Web site">
     </div><br>
 
     <div class="container">
       <span style="margin-right: 11px; margin-left: 6px">&#84;</span> 
-      <select name="" id="">
+      <select id="Typebox">
         <option value="">Sélectionner votre type de commerce</option>
-        <option value="">Alimentaire</option>
-        <option value="">Non-alimentaire</option>
+        <option value="Alimentaire">Alimentaire</option>
+        <option value="Non-alimentaire">Non-alimentaire</option>
       </select>
     </div>
 
@@ -355,14 +360,133 @@
       <label class="labelcheck" for="cgv">Accepter les CGV</label>
     </div>
 
-    <input type="submit" class='btn-form' value="Valider">
+    <button id="Insbtn" class='btn-form'>Valider</button>
   </div>
 
 
 
+  <!---------------------- IMPORTS + CONFIGURATION ---------------------------->
+
+  <script type="module">    
+
+    // Import the functions you need from the SDKs you need  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"; 
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries  
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyBW6yP4Q2tiX-6KwuU9qe9u5RCpmdGlBDU",
+      authDomain: "ecotick-29526.firebaseapp.com",  
+      projectId: "ecotick-29526",  
+      storageBucket: "ecotick-29526.appspot.com",  
+      messagingSenderId: "291528898510",  
+      appId: "1:291528898510:web:86d094dbbb422e172fdd9f", 
+      measurementId: "G-K974E0ZYG4"  
+    };
+  
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  
+    
+    import { 
+      getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField 
+    }
+    from "https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore.js"
+    
+    // Initialize Firestore
+    const db = getFirestore();
 
 
-  <script src="script.js"></script>
+    // ----------------------------  REFERENCES -------------------------------
+  
+    // Container 1
+    let commercePhoto = document.getElementById("Commercepicturebox");
+    let logo = document.getElementById("Logopicturebox");
+
+    // Container 2
+    let email = document.getElementById("Emailbox");
+    let emailConfirm = document.getElementById("Emailconfirmbox");
+    let password = document.getElementById("Passwordbox");
+    let passwordConfirm = document.getElementById("Passwordconfirmbox");
+    let commerceName = document.getElementById("Commercebox");
+    let adresse = document.getElementById("Adressebox");
+    let adresseVisible = document.getElementById("Adressevisiblebox");
+    let telephone = document.getElementById("Telbox");
+    let webSite = document.getElementById("Webbox");
+    let commerceType = document.getElementById("Typebox");
+
+
+
+
+    // Container 8
+
+    let validerBtn = document.getElementById("Insbtn");
+
+
+
+// -----------------------ADDING DOCUMENT-------------------------------
+
+    async function AddDocument_AutoID() {
+      let ref = collection(db,"Commerçants");
+
+      const docRef = await addDoc(
+        ref, {
+          Devanture: commercePhoto.value,
+          Logo: logo.value,
+          Email: email.value,
+          Password: password.value,
+          Commerce: commerceName.value,
+          Adresse : adresse.value,
+          Telephone : telephone.value,
+          WebSite: webSite.value,
+          Type: commerceType.value
+        }
+      )
+      .then (() => {
+        alert("data stored successfully!");
+      })
+      .catch((error) => {
+        alert("unsuccessful, error"+error);
+      });
+    }
+
+
+
+
+
+
+
+// -----------------INSERT DATA FUNCTION ------------------------
+
+    // function InsertData () {
+    //   set(ref(db, "Commerçants/" + id.value), {
+    //     Id: id.value,
+    //     Email: email.value,
+    //     Password: password.value,
+    //     Commerce: commerceName.value,
+    //     Adresse : adresse.value,
+    //     Telephone : telephone.value,
+    //     WebSite: webSite.value,
+    //     Type: commerceType.value
+    //   })
+    //   .then (() => {
+    //     alert("data stored successfully!");
+    //   })
+    //   .catch((error) => {
+    //     alert("unsuccessful, error"+error);
+    //   });
+    // }
+
+// ------------------- ASSIGN EVENTS TO BTNS ----------------------
+
+    validerBtn.addEventListener("click", AddDocument_AutoID);
+
+
+  </script>
 
 </body>
 </html>
