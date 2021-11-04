@@ -10,471 +10,474 @@
 
 
 <body>
-
-  <!--------------------------------------------- Container 1 --------------------------------->
-  
-  <div class="circle">
-    <h1>Inscription<br>commerçant</h1>
-  </div>
-
-  <div class="files">
-    <div class="file">
-      <label for="Commercepicturebox">Choisi la photo du commerce:</label>
-      <input type="file" id="Commercepicturebox" name="commerce" accept="image/png, image/jpeg">
+ 
+  <form>
+    <div class="circle">
+      <h1>Inscription<br>commerçant</h1>
     </div>
 
-    <div class="file">
-      <label for="Logopicturebox">Choisi la photo du logo:</label>
-      <input class='inputfile' type="file" id="Logopicturebox" name="logo" accept="image/png, image/jpg">
-    </div>
-  </div>
+    <!--------------------------------------------- Container 1 --------------------------------->
 
-  <!--------------------------------------------- Container 2 ------------------------------------------->
+    <div class="files">
+      <div class="file">
+        <label for="Commercepicturebox">Choisi la photo du commerce:</label>
+        <input class="inputfile" type="file" id="Commercepicturebox" name="commerce" accept="image/png, image/jpeg">
+      </div>
 
-  <div class="form">
-    
-    <!-- <div class="container">
-      <span>&#8520;&#8518;</span> 
-      <input type="text" id="id" placeholder="Id">
-    </div> -->
-
-    <div class="container">
-      <span>&#9993;</span>
-      <input type="text" id="Emailbox" class="email" placeholder="Email">
+      <div class="file">
+        <label for="Logopicturebox">Choisi la photo du logo:</label>
+        <input class='inputfile' type="file" id="Logopicturebox" name="logo" accept="image/png, image/jpg">
+      </div>
     </div>
 
-    <div class="container">
-      <span>&#9993;</span>
-      <input type="text" id="Emailconfirmbox" placeholder="Email (visible)">
-    </div><br>
+    <!--------------------------------------------- Container 2 ------------------------------------------->
 
-    <div class="container">
-      <span>&#8861;</span>
-      <input type="password" id="Passwordbox" placeholder="Mot de passe">
+    <div class="form">
+      
+      <!-- <div class="container">
+        <span>&#8520;&#8518;</span> 
+        <input type="text" id="id" placeholder="Id">
+      </div> -->
+
+      <div class="container">
+        <span>&#9993;</span>
+        <input type="text" id="Emailbox" class="email" placeholder="Email">
+      </div>
+
+      <div class="container">
+        <span>&#9993;</span>
+        <input type="text" id="Emailconfirmbox" placeholder="Email (visible)">
+      </div><br>
+
+      <div class="container">
+        <span>&#8861;</span>
+        <input type="password" id="Passwordbox" placeholder="Mot de passe">
+      </div>
+
+      <div class="container">
+        <span>&#8860;</span>
+        <input type="password" id="Passwordconfirmbox" placeholder="Confirmation">
+      </div><br>
+
+      <div class="container">
+        <span style="margin-right: 9px; margin-left: 4px">&#9750;</span>
+        <input type="text" id="Commercebox" placeholder="Nom du commerce">
+      </div><br>
+
+      <div class="container">
+        <span>&#9786;</span>
+        <input type="text" id="Adressebox" placeholder="Adresse">
+      </div>
+
+      <div class="container">
+        <span>&#9786;</span>
+        <input type="text" id="Adressevisiblebox" placeholder="Adresse (visible)">
+      </div><br>
+
+      <div class="container">
+        <span>&#9743;</span>
+        <input type="number" id="Telbox" placeholder="Téléphone">
+      </div><br>
+
+      <div class="container">
+        <span>&#10155;</span> 
+        <input type="text" id="Webbox" placeholder="Web site">
+      </div><br>
+
+      <div class="container">
+        <span style="margin-right: 11px; margin-left: 6px">&#84;</span> 
+        <select id="Typebox">
+          <option value="">Sélectionner votre type de commerce</option>
+          <option value="Agence de Voyage">Agence de Voyage</option>
+          <option value="Alimentation Bio">Alimentation Bio</option>
+          <option value="Alimentation Générale">Alimentation Générale</option>
+          <option value="Alimentation Spécialisée">Alimentation Spécialisée</option>
+          <option value="Animalerie">Animalerie</option>
+          <option value="Armurerie">Armurerie</option>
+          <option value="Artisan">Artisan</option>
+          <option value="Artisan Modiste">Artisan Modiste</option>
+          <option value="Autres">Autres</option>
+          <option value="Bar">Bar</option>
+          <option value="Bien d'occasion">Bien d'occasion</option>
+          <option value="Bijouterie">Bijouterie</option>
+          <option value="Bijouterie fantaisie">Bijouterie fantaisie</option>
+          <option value="Boucherie Charcuterie">Boucherie Charcuterie</option>
+          <option value="Boulangerie">Boulangerie</option>
+          <option value="Brasserie Caviste">Brasserie Caviste</option>
+          <option value="Chapellerie Chemiserie">Chapellerie Chemiserie</option>
+          <option value="Chaussure">Chaussure</option>
+          <option value="Concept Store">Concept Store</option>
+          <option value="Conciergerie Location">Conciergerie Location</option>
+          <option value="Controle Technique">Controle Technique</option>
+          <option value="Cordonnerie">Cordonnerie</option>
+          <option value="Disquaire">Disquaire</option>
+          <option value="Electroménager">Electroménager</option>
+          <option value="Epicerie internationale Goodies">Epicerie internationale Goodies</option>
+          <option value="Epicerie Vrac">Epicerie Vrac</option>
+          <option value="Esthétique">Esthétique</option>
+          <option value="Etang">Etang</option>
+          <option value="Fleuriste">Fleuriste</option>
+          <option value="Friperie">Friperie</option>
+          <option value="Frountz Attitude">Frountz Attitude</option>
+          <option value="Horlogerie">Horlogerie</option>
+          <option value="Hotel Restaurant">Hotel Restaurant</option>
+          <option value="Informatique">Informatique</option>
+          <option value="Jardinerie">Jardinerie</option>
+          <option value="Jeux Jouets">Jeux Jouets</option>
+          <option value="Librairie">Librairie</option>
+          <option value="Lingerie">Lingerie</option>
+          <option value="Magasin spécialisé américain">Magasin spécialisé américain</option>
+          <option value="Maroquinerie">Maroquinerie</option>
+          <option value="Mercerie">Mercerie</option>
+          <option value="Mobilier">Mobilier</option>
+          <option value="Multi Commerce X3">Multi Commerce X3</option>
+          <option value="Musique">Musique</option>
+          <option value="Numismatique Pièce de monnaie Collection">Numismatique Pièce de monnaie Collection</option>
+          <option value="Opticien">Opticien</option>
+          <option value="Papeterie">Papeterie</option>
+          <option value="Parapharmacie">Parapharmacie</option>
+          <option value="Parfumerie">Parfumerie</option>
+          <option value="Pret à porter">Pret à porter</option>
+          <option value="Photographe">Photographe</option>
+          <option value="Pizzeria">Pizzeria</option>
+          <option value="Puériculture">Puériculture</option>
+          <option value="Quincaillerie">Quincaillerie</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Salon de coiffure">Salon de coiffure</option>
+          <option value="Snack Friterie">Snack Friterie</option>
+          <option value="Souvenirs">Souvenirs</option>
+          <option value="Sport Loisirs">Sport Loisirs</option>
+          <option value="Transport Logistique">Transport Logistique</option>    
+        </select>
+      </div>
+
     </div>
 
-    <div class="container">
-      <span>&#8860;</span>
-      <input type="password" id="Passwordconfirmbox" placeholder="Confirmation">
-    </div><br>
+    <!------------------------------------ Container 3 ---------------------------------->
 
-    <div class="container">
-      <span style="margin-right: 9px; margin-left: 4px">&#9750;</span>
-      <input type="text" id="Commercebox" placeholder="Nom du commerce">
-    </div><br>
+    <div class="reseaux">
 
-    <div class="container">
-      <span>&#9786;</span>
-      <input type="text" id="Adressebox" placeholder="Adresse">
+      <div class="container-reseaux">
+        <select name="" id="Selectreseaubox">
+          <option value="">Choisir un réseau</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Snapchat">Snapchat</option>
+          <option value="Messenger">Messenger</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Discord">Discord</option>
+        </select>
+        <input type="text" id="Pseudobox" placeholder="Pseudo sur le réseau">
+        <input type="text" id="Lienbox" placeholder="Lien sur le réseau">
+      </div>
+
+      <div class="container-reseaux">
+        <select name="" id="Selectreseaubox2">
+          <option value="">Choisir un réseau</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Snapchat">Snapchat</option>
+          <option value="Messenger">Messenger</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Discord">Discord</option>
+        </select>
+        <input type="text" id="Pseudobox2" placeholder="Pseudo sur le réseau">
+        <input type="text" id="Lienbox2" placeholder="Lien sur le réseau">
+      </div>
+
+      <div class="container-reseaux">
+        <select name="" id="Selectreseaubox3">
+          <option value="">Choisir un réseau</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Snapchat">Snapchat</option>
+          <option value="Messenger">Messenger</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Discord">Discord</option>
+        </select>
+        <input type="text" id="Pseudobox3" placeholder="Pseudo sur le réseau">
+        <input type="text" id="Lienbox3" placeholder="Lien sur le réseau">
+      </div>
+
+      <div class="container-reseaux">
+        <select name="" id="Selectreseaubox4">
+          <option value="">Choisir un réseau</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Snapchat">Snapchat</option>
+          <option value="Messenger">Messenger</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Discord">Discord</option>
+        </select>
+        <input type="text" id="Pseudobox4" placeholder="Pseudo sur le réseau">
+        <input type="text" id="Lienbox4" placeholder="Lien sur le réseau">
+      </div>
+
+      <div class="container-reseaux">
+        <select name="" id="Selectreseaubox5">
+          <option value="">Choisir un réseau</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Linkedin">Linkedin</option>
+          <option value="WhatsApp">WhatsApp</option>
+          <option value="Snapchat">Snapchat</option>
+          <option value="Messenger">Messenger</option>
+          <option value="Pinterest">Pinterest</option>
+          <option value="TikTok">TikTok</option>
+          <option value="Discord">Discord</option>
+        </select>
+        <input type="text" id="Pseudobox5" placeholder="Pseudo sur le réseau">
+        <input type="text" id="Lienbox5" placeholder="Lien sur le réseau">
+      </div>
+
     </div>
 
-    <div class="container">
-      <span>&#9786;</span>
-      <input type="text" id="Adressevisiblebox" placeholder="Adresse (visible)">
-    </div><br>
+  <!------------------------------------- Container 4 -------------------------------------------->
 
-    <div class="container">
-      <span>&#9743;</span>
-      <input type="number" id="Telbox" placeholder="Téléphone">
-    </div><br>
+    <div class="initiatives">
+      <select class="initiative" name="" id="Selectinitiativebox">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
+      </select>
 
-    <div class="container">
-      <span>&#10155;</span> 
-      <input type="text" id="Webbox" placeholder="Web site">
-    </div><br>
+      <select class="initiative" name="" id="Selectinitiativebox2">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
+      </select>
 
-    <div class="container">
-      <span style="margin-right: 11px; margin-left: 6px">&#84;</span> 
-      <select id="Typebox">
-        <option value="">Sélectionner votre type de commerce</option>
-        <option value="Agence de Voyage">Agence de Voyage</option>
-        <option value="Alimentation Bio">Alimentation Bio</option>
-        <option value="Alimentation Générale">Alimentation Générale</option>
-        <option value="Alimentation Spécialisée">Alimentation Spécialisée</option>
-        <option value="Animalerie">Animalerie</option>
-        <option value="Armurerie">Armurerie</option>
-        <option value="Artisan">Artisan</option>
-        <option value="Artisan Modiste">Artisan Modiste</option>
-        <option value="Autres">Autres</option>
-        <option value="Bar">Bar</option>
-        <option value="Bien d'occasion">Bien d'occasion</option>
-        <option value="Bijouterie">Bijouterie</option>
-        <option value="Bijouterie fantaisie">Bijouterie fantaisie</option>
-        <option value="Boucherie Charcuterie">Boucherie Charcuterie</option>
-        <option value="Boulangerie">Boulangerie</option>
-        <option value="Brasserie Caviste">Brasserie Caviste</option>
-        <option value="Chapellerie Chemiserie">Chapellerie Chemiserie</option>
-        <option value="Chaussure">Chaussure</option>
-        <option value="Concept Store">Concept Store</option>
-        <option value="Conciergerie Location">Conciergerie Location</option>
-        <option value="Controle Technique">Controle Technique</option>
-        <option value="Cordonnerie">Cordonnerie</option>
-        <option value="Disquaire">Disquaire</option>
-        <option value="Electroménager">Electroménager</option>
-        <option value="Epicerie internationale Goodies">Epicerie internationale Goodies</option>
-        <option value="Epicerie Vrac">Epicerie Vrac</option>
-        <option value="Esthétique">Esthétique</option>
-        <option value="Etang">Etang</option>
-        <option value="Fleuriste">Fleuriste</option>
-        <option value="Friperie">Friperie</option>
-        <option value="Frountz Attitude">Frountz Attitude</option>
-        <option value="Horlogerie">Horlogerie</option>
-        <option value="Hotel Restaurant">Hotel Restaurant</option>
-        <option value="Informatique">Informatique</option>
-        <option value="Jardinerie">Jardinerie</option>
-        <option value="Jeux Jouets">Jeux Jouets</option>
-        <option value="Librairie">Librairie</option>
-        <option value="Lingerie">Lingerie</option>
-        <option value="Magasin spécialisé américain">Magasin spécialisé américain</option>
-        <option value="Maroquinerie">Maroquinerie</option>
-        <option value="Mercerie">Mercerie</option>
-        <option value="Mobilier">Mobilier</option>
-        <option value="Multi Commerce X3">Multi Commerce X3</option>
-        <option value="Musique">Musique</option>
-        <option value="Numismatique Pièce de monnaie Collection">Numismatique Pièce de monnaie Collection</option>
-        <option value="Opticien">Opticien</option>
-        <option value="Papeterie">Papeterie</option>
-        <option value="Parapharmacie">Parapharmacie</option>
-        <option value="Parfumerie">Parfumerie</option>
-        <option value="Pret à porter">Pret à porter</option>
-        <option value="Photographe">Photographe</option>
-        <option value="Pizzeria">Pizzeria</option>
-        <option value="Puériculture">Puériculture</option>
-        <option value="Quincaillerie">Quincaillerie</option>
-        <option value="Restaurant">Restaurant</option>
-        <option value="Salon de coiffure">Salon de coiffure</option>
-        <option value="Snack Friterie">Snack Friterie</option>
-        <option value="Souvenirs">Souvenirs</option>
-        <option value="Sport Loisirs">Sport Loisirs</option>
-        <option value="Transport Logistique">Transport Logistique</option>    
+      <select class="initiative" name="" id="Selectinitiativebox3">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
+      </select>
+
+      <select class="initiative" name="" id="Selectinitiativebox4">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
+      </select>
+
+      <select class="initiative" name="" id="Selectinitiativebox5">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
+      </select>
+
+      <select class="initiative" name="" id="Selectinitiativebox6">
+        <option value="">Choisir une initiative</option>
+        <option value="Beegift">Beegift</option>
+        <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
+        <option value="Chèque déjeuner">Chèque déjeuner</option>
+        <option value="Chèque la Pointe">Chèque la Pointe</option>
+        <option value="Chèque Lire">Chèque Lire</option>
+        <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
+        <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
+        <option value="Jeun Est">Jeun Est</option>
+        <option value="Mondial Relay">Mondial Relay</option>
+        <option value="Pass Culture">Pass Culture</option>
+        <option value="PickUp">PickUp</option>
+        <option value="Ticket Restaurant">Ticket Restaurant</option>
+        <option value="Titres Cado">Titres Cado</option>
+        <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
       </select>
     </div>
 
-  </div>
+  <!---------------------------------- Container 5 ------------------------------------>
 
-  <!------------------------------------ Container 3 ---------------------------------->
-
-  <div class="reseaux">
-
-    <div class="container-reseaux">
-      <select name="" id="Selectreseaubox">
-        <option value="">Choisir un réseau</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Linkedin">Linkedin</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Snapchat">Snapchat</option>
-        <option value="Messenger">Messenger</option>
-        <option value="Pinterest">Pinterest</option>
-        <option value="TikTok">TikTok</option>
-        <option value="Discord">Discord</option>
-      </select>
-      <input type="text" id="Pseudobox" placeholder="Pseudo sur le réseau">
-      <input type="text" id="Lienbox" placeholder="Lien sur le réseau">
+    <div class="tags">
+      <div class="tag">
+        <span>&#9998;</span> 
+        <input id="Tagbox" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>  
+        <input id="Tagbox2" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>  
+        <input id="Tagbox3" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>   
+        <input id="Tagbox4" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>   
+        <input id="Tagbox5" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>  
+        <input id="Tagbox6" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>   
+        <input id="Tagbox7" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>   
+        <input id="Tagbox8" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>  
+        <input id="Tagbox9" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
+      <div class="tag">
+        <span>&#9998;</span>  
+        <input id="Tagbox10" class="input-tag" type="text" placeholder="Entrez un tag">
+      </div>
     </div>
 
-    <div class="container-reseaux">
-      <select name="" id="Selectreseaubox2">
-        <option value="">Choisir un réseau</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Linkedin">Linkedin</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Snapchat">Snapchat</option>
-        <option value="Messenger">Messenger</option>
-        <option value="Pinterest">Pinterest</option>
-        <option value="TikTok">TikTok</option>
-        <option value="Discord">Discord</option>
-      </select>
-      <input type="text" id="Pseudobox2" placeholder="Pseudo sur le réseau">
-      <input type="text" id="Lienbox2" placeholder="Lien sur le réseau">
+    <!---------------------- Container 6 -------------------------->
+
+    <div class="horaire">
+      <div class="jours">
+        <label class="lundi" for="Lundibox">Lundi</label>
+        <input class='inputday' type="text" id="Lundibox" placeholder="Horaire">      
+      </div>
+
+      <div class="jours">
+        <label class="mardi" for="Mardibox">Mardi</label>
+        <input class='inputday' type="text" id="Mardibox" placeholder="Horaire">
+      </div>
+
+      <div class="jours">
+        <label class="mercredi" for="Mercredibox">Mercredi</label>
+        <input class='inputday' type="text" id="Mercredibox" placeholder="Horaire">
+      </div>
+
+      <div class="jours">
+        <label class="jeudi" for="Jeudibox">Jeudi</label>
+        <input class='inputday' type="text" id="Jeudibox" placeholder="Horaire">
+      </div>
+
+      <div class="jours">
+        <label class="vendredi" for="Vendredibox">Vendredi</label>
+        <input class='inputday' type="text" id="Vendredibox" placeholder="Horaire">
+      </div>
+
+      <div class="jours">
+        <label class="samedi" for="Samedibox">Samedi</label>
+        <input class='inputday' type="text" id="Samedibox" placeholder="Horaire">
+      </div>
+
+      <div class="jours">
+        <label class="dimanche" for="Dimanchebox">Dimanche</label>
+        <input class='inputday' type="text" id="Dimanchebox" placeholder="Horaire">
+      </div>
     </div>
 
-    <div class="container-reseaux">
-      <select name="" id="Selectreseaubox3">
-        <option value="">Choisir un réseau</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Linkedin">Linkedin</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Snapchat">Snapchat</option>
-        <option value="Messenger">Messenger</option>
-        <option value="Pinterest">Pinterest</option>
-        <option value="TikTok">TikTok</option>
-        <option value="Discord">Discord</option>
-      </select>
-      <input type="text" id="Pseudobox3" placeholder="Pseudo sur le réseau">
-      <input type="text" id="Lienbox3" placeholder="Lien sur le réseau">
+    <!---------------------------------------- Container 7 --------------------------------------->
+
+    <div class="description">
+      <label class="labeltitle" for="description">Description</label>
+      <textarea name="description" id="Commentairebox">Entrez votre description ici...</textarea>
     </div>
 
-    <div class="container-reseaux">
-      <select name="" id="Selectreseaubox4">
-        <option value="">Choisir un réseau</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Linkedin">Linkedin</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Snapchat">Snapchat</option>
-        <option value="Messenger">Messenger</option>
-        <option value="Pinterest">Pinterest</option>
-        <option value="TikTok">TikTok</option>
-        <option value="Discord">Discord</option>
-      </select>
-      <input type="text" id="Pseudobox4" placeholder="Pseudo sur le réseau">
-      <input type="text" id="Lienbox4" placeholder="Lien sur le réseau">
+    <!----------------------------------------- Container 8 -------------------------------------->
+
+    <div class="cases">
+      <div class="case">
+        <input type="checkbox" id="Mesbox">
+        <label class="labelcheck" for="mes">Messagerie</label>
+      </div>
+
+      <div class="case">
+        <input type="checkbox" id="Ticbox">
+        <label class="labelcheck" for="tic">Ticket dématérialisé</label>
+      </div>
+
+      <div class="case">
+        <input type="checkbox" id="Resbox">
+        <label class="labelcheck" for="res">Restaurant</label>
+      </div>
+
+      <div class="case">
+        <input type="checkbox" id="Cgvbox">
+        <label class="labelcheck" for="Cgvbox">Accepter les CGV</label>
+      </div>
+
+      <button id="Insbtn" class='btn-form'>Valider</button>
     </div>
-
-    <div class="container-reseaux">
-      <select name="" id="Selectreseaubox5">
-        <option value="">Choisir un réseau</option>
-        <option value="Facebook">Facebook</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Linkedin">Linkedin</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Snapchat">Snapchat</option>
-        <option value="Messenger">Messenger</option>
-        <option value="Pinterest">Pinterest</option>
-        <option value="TikTok">TikTok</option>
-        <option value="Discord">Discord</option>
-      </select>
-      <input type="text" id="Pseudobox5" placeholder="Pseudo sur le réseau">
-      <input type="text" id="Lienbox5" placeholder="Lien sur le réseau">
-    </div>
-
-  </div>
-
-<!------------------------------------- Container 4 -------------------------------------------->
-
-  <div class="initiatives">
-    <select class="initiative" name="" id="Selectinitiativebox">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-
-    <select class="initiative" name="" id="Selectinitiativebox2">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-
-    <select class="initiative" name="" id="Selectinitiativebox3">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-
-    <select class="initiative" name="" id="Selectinitiativebox4">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-
-    <select class="initiative" name="" id="Selectinitiativebox5">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-
-    <select class="initiative" name="" id="Selectinitiativebox6">
-      <option value="">Choisir une initiative</option>
-      <option value="Beegift">Beegift</option>
-      <option value="Chèque Ardennes Métropole">Chèque Ardennes Métropole</option>
-      <option value="Chèque déjeuner">Chèque déjeuner</option>
-      <option value="Chèque la Pointe">Chèque la Pointe</option>
-      <option value="Chèque Lire">Chèque Lire</option>
-      <option value="Chèque Shopping Pass">Chèque Shopping Pass</option>
-      <option value="Chèque vacances ANCV">Chèque vacances ANCV</option>
-      <option value="Jeun Est">Jeun Est</option>
-      <option value="Mondial Relay">Mondial Relay</option>
-      <option value="Pass Culture">Pass Culture</option>
-      <option value="PickUp">PickUp</option>
-      <option value="Ticket Restaurant">Ticket Restaurant</option>
-      <option value="Titres Cado">Titres Cado</option>
-      <option value="Vitrines de Charleville-Mézières">Vitrines de Charleville-Mézières</option>
-    </select>
-  </div>
-
-<!---------------------------------- Container 5 ------------------------------------>
-
-  <div class="tags">
-    <div class="tag">
-      <span>&#9998;</span> 
-      <input id="Tagbox" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>  
-      <input id="Tagbox2" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>  
-      <input id="Tagbox3" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>   
-      <input id="Tagbox4" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>   
-      <input id="Tagbox5" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>  
-      <input id="Tagbox6" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>   
-      <input id="Tagbox7" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>   
-      <input id="Tagbox8" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>  
-      <input id="Tagbox9" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-    <div class="tag">
-      <span>&#9998;</span>  
-      <input id="Tagbox10" class="input-tag" type="text" placeholder="Entrez un tag">
-    </div>
-  </div>
-
-  <!---------------------- Container 6 -------------------------->
-
-  <div class="horaire">
-    <div class="jours">
-      <label class="lundi" for="Lundibox">Lundi</label>
-      <input class='inputday' type="text" id="Lundibox" placeholder="Horaire">      
-    </div>
-
-    <div class="jours">
-      <label class="mardi" for="Mardibox">Mardi</label>
-      <input class='inputday' type="text" id="Mardibox" placeholder="Horaire">
-    </div>
-
-    <div class="jours">
-      <label class="mercredi" for="Mercredibox">Mercredi</label>
-      <input class='inputday' type="text" id="Mercredibox" placeholder="Horaire">
-    </div>
-
-    <div class="jours">
-      <label class="jeudi" for="Jeudibox">Jeudi</label>
-      <input class='inputday' type="text" id="Jeudibox" placeholder="Horaire">
-    </div>
-
-    <div class="jours">
-      <label class="vendredi" for="Vendredibox">Vendredi</label>
-      <input class='inputday' type="text" id="Vendredibox" placeholder="Horaire">
-    </div>
-
-    <div class="jours">
-      <label class="samedi" for="Samedibox">Samedi</label>
-      <input class='inputday' type="text" id="Samedibox" placeholder="Horaire">
-    </div>
-
-    <div class="jours">
-      <label class="dimanche" for="Dimanchebox">Dimanche</label>
-      <input class='inputday' type="text" id="Dimanchebox" placeholder="Horaire">
-    </div>
-  </div>
-
-  <!---------------------------------------- Container 7 --------------------------------------->
-
-  <div class="description">
-    <label class="labeltitle" for="description">Description</label>
-    <textarea name="description" id="commentaire">Entrez votre description ici...</textarea>
-  </div>
-
-  <div class="cases">
-    <div class="case">
-      <input type="checkbox" id="mes">
-      <label class="labelcheck" for="mes">Messagerie</label>
-    </div>
-
-    <div class="case">
-      <input type="checkbox" id="tic">
-      <label class="labelcheck" for="tic">Ticket dématérialisé</label>
-    </div>
-
-    <div class="case">
-      <input type="checkbox" id="res">
-      <label class="labelcheck" for="res">Restaurant</label>
-    </div>
-
-    <div class="case">
-      <input type="checkbox" id="cgv">
-      <label class="labelcheck" for="cgv">Accepter les CGV</label>
-    </div>
-
-    <button id="Insbtn" class='btn-form'>Valider</button>
-  </div>
-
+  </form>
 
 
   <!---------------------- IMPORTS + CONFIGURATION ---------------------------->
@@ -583,11 +586,14 @@
     let dimanche = document.getElementById("Dimanchebox");
 
     // Container 7
-
+    let description = document.getElementById("Commentairebox");
     
 
     // Container 8
-
+    let messagerie = document.getElementById("Mesbox");
+    let ticketDemat = document.getElementById("Ticbox");
+    let restaurant = document.getElementById("Resbox");
+    let cgv = document.getElementById("Cgvbox");
     let validerBtn = document.getElementById("Insbtn");
 
 
@@ -653,12 +659,21 @@
           Samedi: samedi.value,
           Dimanche: dimanche.value,
           
+          Description: description.value,
+
+          Messagerie: messagerie.checked,
+          TicketDemat: ticketDemat.checked,
+          Restaurant: restaurant.checked,
+          Cgv: cgv.checked
+          
 
         }
       )
+      
       .then (() => {
         alert("data stored successfully!");
       })
+      
       .catch((error) => {
         alert("unsuccessful, error"+error);
       });
@@ -671,8 +686,10 @@
 
     validerBtn.addEventListener("click", AddDocument_AutoID);
 
-
+    
   </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
+

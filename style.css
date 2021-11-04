@@ -48,6 +48,34 @@ h1 {
   transform: translate(-50%);
 }
 
+.files {
+  border: 3px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  margin: 0 10%;
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.file {
+  align-items: center;
+  color:rgb(0, 0, 0);
+  font-family: 'Lacquer', cursive;
+  font-size: 1.4rem;
+}
+
+.inputfile {
+  border: 2px solid black;
+  font-family: 'Lacquer', cursive;
+  font-size: 0.7rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -113,22 +141,7 @@ span {
   margin-bottom: 40px;
 }
 
-.files {
-  border: 3px solid rgb(0, 0, 0);
-  display: flex;
-  justify-content: space-around;
-  margin: 0 10%;
-  background: rgba(255, 255, 255, 0.8);
-  margin-bottom: 40px;
-  border-radius: 15px;
-  padding: 20px;
-}
 
-.file {
-  color:black;
-  font-family: 'Lacquer', cursive;
-  font-size: 1.2rem;
-}
 
 .initiatives {
   border: 3px solid rgb(255, 255, 255);
@@ -195,7 +208,7 @@ span {
 
 textarea {
   resize: none;
-  width: 50%;
+  width: 60%;
   min-height: 150px;
 }
 
@@ -242,6 +255,7 @@ textarea {
   background: rgb(46, 137, 255);
   box-shadow: 2px 2px 20px white;
   cursor: pointer;
+  transform:translate(5px, 5px);
 }
 
 
@@ -257,13 +271,15 @@ textarea {
   select {
     width: 200px;
   }
+  .labelcheck {
+    left: -90px;
+  }
 }
 
 @media screen and (max-width: 940px) {
   .form {
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;    
     height: auto;
   }
   input {
@@ -276,6 +292,12 @@ textarea {
     width: 100%;
     margin-top: 15px;
   }
+  .file{
+    font-size: 1.2rem;
+  }
+  textarea {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 635px) {
@@ -285,8 +307,36 @@ textarea {
   select {
     width: 273px;
   }
+  .files {
+    flex-direction: column;
+  }
+  .file {
+    margin-left: 20%;   
+  }
+  textarea {
+    width: 80%;
+  }
+  .labelcheck {
+    left: 0px;
+  }
+  .case {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+
 }
 
+@media screen and (max-width: 540px) {
+  .file {
+    margin-left: 15%;   
+  }
+  textarea {
+    width: 90%;
+  }
+}
 
 @media screen and (max-width: 450px) {
   input {
@@ -294,6 +344,13 @@ textarea {
   }
   select {
     width: 223px;
+  }
+  .file {
+    font-size: 1rem;
+    margin-left: 10%;   
+  }
+  textarea {
+    width: 100%;
   }
 }
 
