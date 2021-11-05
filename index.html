@@ -11,7 +11,7 @@
 
 <body>
  
-  <form>
+  <!-- <form> -->
     <div class="circle">
       <h1>Inscription<br>commerçant</h1>
     </div>
@@ -21,7 +21,7 @@
     <div class="files">
       <div class="file">
         <label for="Commercepicturebox">Choisi la photo du commerce:</label>
-        <input class="inputfile" type="file" id="Commercepicturebox" name="commerce" accept="image/png, image/jpeg">
+        <input class="inputfile" type="file" id="Commercepicturebox" name="commerce" accept="image/png, image/jpg">
       </div>
 
       <div class="file">
@@ -76,7 +76,7 @@
 
       <div class="container">
         <span>&#9743;</span>
-        <input type="number" id="Telbox" placeholder="Téléphone">
+        <input class="tel" type="number" id="Telbox" placeholder="Téléphone">
       </div><br>
 
       <div class="container">
@@ -171,8 +171,8 @@
           <option value="TikTok">TikTok</option>
           <option value="Discord">Discord</option>
         </select>
-        <input type="text" id="Pseudobox" placeholder="Pseudo sur le réseau">
-        <input type="text" id="Lienbox" placeholder="Lien sur le réseau">
+        <input type="text" id="Pseudobox" placeholder="Pseudo">
+        <input type="text" id="Lienbox" placeholder="Lien">
       </div>
 
       <div class="container-reseaux">
@@ -189,8 +189,8 @@
           <option value="TikTok">TikTok</option>
           <option value="Discord">Discord</option>
         </select>
-        <input type="text" id="Pseudobox2" placeholder="Pseudo sur le réseau">
-        <input type="text" id="Lienbox2" placeholder="Lien sur le réseau">
+        <input type="text" id="Pseudobox2" placeholder="Pseudo">
+        <input type="text" id="Lienbox2" placeholder="Lien">
       </div>
 
       <div class="container-reseaux">
@@ -207,8 +207,8 @@
           <option value="TikTok">TikTok</option>
           <option value="Discord">Discord</option>
         </select>
-        <input type="text" id="Pseudobox3" placeholder="Pseudo sur le réseau">
-        <input type="text" id="Lienbox3" placeholder="Lien sur le réseau">
+        <input type="text" id="Pseudobox3" placeholder="Pseudo">
+        <input type="text" id="Lienbox3" placeholder="Lien">
       </div>
 
       <div class="container-reseaux">
@@ -225,8 +225,8 @@
           <option value="TikTok">TikTok</option>
           <option value="Discord">Discord</option>
         </select>
-        <input type="text" id="Pseudobox4" placeholder="Pseudo sur le réseau">
-        <input type="text" id="Lienbox4" placeholder="Lien sur le réseau">
+        <input type="text" id="Pseudobox4" placeholder="Pseudo">
+        <input type="text" id="Lienbox4" placeholder="Lien">
       </div>
 
       <div class="container-reseaux">
@@ -243,8 +243,8 @@
           <option value="TikTok">TikTok</option>
           <option value="Discord">Discord</option>
         </select>
-        <input type="text" id="Pseudobox5" placeholder="Pseudo sur le réseau">
-        <input type="text" id="Lienbox5" placeholder="Lien sur le réseau">
+        <input type="text" id="Pseudobox5" placeholder="Pseudo">
+        <input type="text" id="Lienbox5" placeholder="Lien">
       </div>
 
     </div>
@@ -474,10 +474,14 @@
         <input type="checkbox" id="Cgvbox">
         <label class="labelcheck" for="Cgvbox">Accepter les CGV</label>
       </div>
-
-      <button id="Insbtn" class='btn-form'>Valider</button>
+      <div class="containerBtn">
+        <button id="Insbtn" class='btn-form'>INSERT</button>
+        <button id="Selbtn" class='btn-form'>SELECT</button>
+        <button id="Updbtn" class='btn-form'>UPDATE</button>
+        <button id="Delbtn" class='btn-form'>DELETE</button>
+      </div>
     </div>
-  </form>
+  <!-- </form> -->
 
 
   <!---------------------- IMPORTS + CONFIGURATION ---------------------------->
@@ -594,14 +598,17 @@
     let ticketDemat = document.getElementById("Ticbox");
     let restaurant = document.getElementById("Resbox");
     let cgv = document.getElementById("Cgvbox");
-    let validerBtn = document.getElementById("Insbtn");
+    let insBtn = document.getElementById("Insbtn");
+    let selBtn = document.getElementById("Selbtn");
+    let updBtn = document.getElementById("Updbtn");
+    let delBtn = document.getElementById("Delbtn");
 
 
 
 // -----------------------ADDING DOCUMENT-------------------------------
 
     async function AddDocument_AutoID() {
-      let ref = collection(db,"Commerçants");
+      const ref = collection(db,"Commerçants");
 
       const docRef = await addDoc(
         ref, {
@@ -679,12 +686,270 @@
       });
     }
 
+    // Custom ID
 
+    async function AddDocument_CustomID() {
+      const ref = doc(db,"Commerçants", Telbox.value);
+
+      await setDoc(
+        ref, {
+          Devanture: commercePhoto.value,
+          Logo: logo.value,
+          Email: email.value,
+          Password: password.value,
+          Commerce: commerceName.value,
+          Adresse : adresse.value,
+          Telephone : telephone.value,
+          WebSite: webSite.value,
+          Type: commerceType.value,
+
+          Reseau: reseau.value,
+          Reseau2: reseau2.value,
+          Reseau3: reseau3.value,
+          Reseau4: reseau4.value,
+          Reseau5: reseau5.value,
+          
+          PseudoReseau: pseudo.value,
+          PseudoReseau2: pseudo2.value,
+          PseudoReseau3: pseudo3.value,
+          PseudoReseau4: pseudo4.value,
+          PseudoReseau5: pseudo5.value,
+          
+          LienReseau: lien.value,
+          LienReseau2: lien2.value,
+          LienReseau3: lien3.value,
+          LienReseau4: lien4.value,
+          LienReseau5: lien5.value,
+          
+          Initiative: initiative.value,
+          Initiative2: initiative2.value,
+          Initiative3: initiative3.value,
+          Initiative4: initiative4.value,
+          Initiative5: initiative5.value,
+          Initiative6: initiative6.value,
+
+          Tag: tag.value,
+          Tag2: tag2.value,
+          Tag3: tag3.value,
+          Tag4: tag4.value,
+          Tag5: tag5.value,
+          Tag6: tag6.value,
+          Tag7: tag7.value,
+          Tag8: tag8.value,
+          Tag9: tag9.value,
+          Tag10: tag10.value,
+
+          Lundi: lundi.value,
+          Mardi: mardi.value,
+          Mercredi: mercredi.value,
+          Jeudi: jeudi.value,
+          Vendredi: vendredi.value,
+          Samedi: samedi.value,
+          Dimanche: dimanche.value,
+          
+          Description: description.value,
+
+          Messagerie: messagerie.checked,
+          TicketDemat: ticketDemat.checked,
+          Restaurant: restaurant.checked,
+          Cgv: cgv.checked
+          
+
+        }
+      )
+      
+      .then (() => {
+        alert("data added successfully!");
+      })
+      
+      .catch((error) => {
+        alert("unsuccessful, error"+ error);
+      });
+    }
+
+// ------------------------GETTING DOCUMENT-----------------------
+
+    async function GetADocument() {
+      const ref = doc(db, "Commerçants", Telbox.value);
+      const docSnap = await getDoc(ref);
+      
+      if(docSnap.exists()) {
+        commercePhoto.value = docSnap.data().Devanture;
+        logo.value = docSnap.data().Logo;
+        email.value = docSnap.data().Email;
+        password.value = docSnap.data().Password;
+        commerceName.value = docSnap.data().Commerce;
+        adresse.value = docSnap.data().Adresse;
+        webSite.value = docSnap.data().WebSite;
+        commerceType.value = docSnap.data().Type;
+
+        reseau.value = docSnap.data().Reseau;
+        reseau2.value = docSnap.data().Reseau2;
+        reseau3.value = docSnap.data().Reseau3;
+        reseau4.value = docSnap.data().Reseau4;
+        reseau5.value = docSnap.data().Reseau5;
+
+        pseudo.value = docSnap.data().PseudoReseau;
+        pseudo2.value = docSnap.data().PseudoReseau2;
+        pseudo3.value = docSnap.data().PseudoReseau3;
+        pseudo4.value = docSnap.data().PseudoReseau4;
+        pseudo5.value = docSnap.data().PseudoReseau5;
+
+        lien.value = docSnap.data().LienReseau;
+        lien2.value = docSnap.data().LienReseau2;
+        lien3.value = docSnap.data().LienReseau3;
+        lien4.value = docSnap.data().LienReseau4;
+        lien5.value = docSnap.data().LienReseau5;
+
+        initiative.value = docSnap.data().Initiative;
+        initiative2.value = docSnap.data().Initiative2;
+        initiative3.value = docSnap.data().Initiative3;
+        initiative4.value = docSnap.data().Initiative4;
+        initiative5.value = docSnap.data().Initiative5;
+        initiative6.value = docSnap.data().Initiative6;
+
+        tag.value = docSnap.data().Tag;
+        tag2.value = docSnap.data().Tag2;
+        tag3.value = docSnap.data().Tag3;
+        tag4.value = docSnap.data().Tag4;
+        tag5.value = docSnap.data().Tag5;
+        tag6.value = docSnap.data().Tag6;
+        tag7.value = docSnap.data().Tag7;
+        tag8.value = docSnap.data().Tag8;
+        tag9.value = docSnap.data().Tag9;
+        tag10.value = docSnap.data().Tag10;
+
+        lundi.value = docSnap.data().Lundi;
+        mardi.value = docSnap.data().Mardi;
+        mercredi.value = docSnap.data().Mercredi;
+        jeudi.value = docSnap.data().Jeudi;
+        vendredi.value = docSnap.data().Vendredi;
+        samedi.value = docSnap.data().Samedi;
+        dimanche.value = docSnap.data().Dimanche;
+
+        description.value = docSnap.data().Description;
+
+        messagerie.checked = docSnap.data().Messagerie;
+        ticketDemat.checked = docSnap.data().TicketDemat;
+        restaurant.checked = docSnap.data().Restaurant;
+        cgv.checked = docSnap.data().Cgv;
+        
+      } else {
+        alert("No such document");
+      }
+    }
+
+// ---------------------UPDATING DOCUMENT--------------------------
+
+async function UpdateFieldsInADocument() {
+      const ref = doc(db,"Commerçants", Telbox.value);
+
+      await updateDoc(
+        ref, {
+          Devanture: commercePhoto.value,
+          Logo: logo.value,
+          Email: email.value,
+          Password: password.value,
+          Commerce: commerceName.value,
+          Adresse : adresse.value,
+          Telephone : telephone.value,
+          WebSite: webSite.value,
+          Type: commerceType.value,
+
+          Reseau: reseau.value,
+          Reseau2: reseau2.value,
+          Reseau3: reseau3.value,
+          Reseau4: reseau4.value,
+          Reseau5: reseau5.value,
+          
+          PseudoReseau: pseudo.value,
+          PseudoReseau2: pseudo2.value,
+          PseudoReseau3: pseudo3.value,
+          PseudoReseau4: pseudo4.value,
+          PseudoReseau5: pseudo5.value,
+          
+          LienReseau: lien.value,
+          LienReseau2: lien2.value,
+          LienReseau3: lien3.value,
+          LienReseau4: lien4.value,
+          LienReseau5: lien5.value,
+          
+          Initiative: initiative.value,
+          Initiative2: initiative2.value,
+          Initiative3: initiative3.value,
+          Initiative4: initiative4.value,
+          Initiative5: initiative5.value,
+          Initiative6: initiative6.value,
+
+          Tag: tag.value,
+          Tag2: tag2.value,
+          Tag3: tag3.value,
+          Tag4: tag4.value,
+          Tag5: tag5.value,
+          Tag6: tag6.value,
+          Tag7: tag7.value,
+          Tag8: tag8.value,
+          Tag9: tag9.value,
+          Tag10: tag10.value,
+
+          Lundi: lundi.value,
+          Mardi: mardi.value,
+          Mercredi: mercredi.value,
+          Jeudi: jeudi.value,
+          Vendredi: vendredi.value,
+          Samedi: samedi.value,
+          Dimanche: dimanche.value,
+          
+          Description: description.value,
+
+          Messagerie: messagerie.checked,
+          TicketDemat: ticketDemat.checked,
+          Restaurant: restaurant.checked,
+          Cgv: cgv.checked
+          
+
+        }
+      )
+      
+      .then (() => {
+        alert("data updated successfully!");
+      })
+      
+      .catch((error) => {
+        alert("unsuccessful, error"+ error);
+      });
+    }
+
+//------------------------DELETING DOCUMENT----------------------------
+
+    async function DeleteDocument() {
+      const ref = doc(db,"Commerçants", Telbox.value);
+      const docSnap = await getDoc(ref);
+
+      if(!docSnap.exists()) {
+        alert("Document does not exist");
+        return;
+      }
+      await deleteDoc(ref)
+      .then (() => {
+        alert("data deleted successfully");
+      })
+      .catch ((error) => {
+        alert("Unsuccessfully operation, error: " + error);
+      });
+    }
 
 
 // ------------------- ASSIGN EVENTS TO BTNS ----------------------
 
-    validerBtn.addEventListener("click", AddDocument_AutoID);
+    //insBtn.addEventListener("click", AddDocument_AutoID);
+    insBtn.addEventListener("click", AddDocument_CustomID);
+
+    selBtn.addEventListener("click", GetADocument);
+
+    updBtn.addEventListener("click", UpdateFieldsInADocument);
+
+    delBtn.addEventListener("click", DeleteDocument);
 
     
   </script>

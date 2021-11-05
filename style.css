@@ -11,8 +11,6 @@
 body {
   background: url("./ressources/art.jpg") center/cover;
   background-attachment: fixed;
-  /* background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); */
-  
 }
 
 input, select {
@@ -23,8 +21,8 @@ input, select {
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 250px;
-  width: 250px;
+  height: 230px;
+  width: 230px;
   border-radius: 50%;
   background-color: rgba(240, 248, 255, 0.95);
   position: relative;
@@ -57,17 +55,17 @@ h1 {
 	align-items: center;
 	align-content: center;
   margin: 0 10%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .file {
   align-items: center;
   color:rgb(0, 0, 0);
   font-family: 'Lacquer', cursive;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .inputfile {
@@ -100,11 +98,17 @@ input {
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
+  /* font-family: 'Lacquer', cursive; */
 }
+
+/* .tel {
+  font-family: sans-serif;
+} */
 
 select {
   padding: 10px;
   border: 1px solid black;
+  font-family: 'Lacquer', sans-serif;
 }
 
 .email:before {
@@ -220,18 +224,18 @@ textarea {
 
 .cases {
   padding-top: 20px;
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   margin: 0 10%;
   border-radius: 15px;
   margin-bottom: 40px;
 }
 
 .case {
-  color:aliceblue;
+  color:black;
   font-family: 'Lacquer', cursive;
   font-size: 1.4rem;
 }
@@ -245,15 +249,17 @@ textarea {
 .btn-form {
   font-family: 'Lacquer', cursive;
   font-size: 1.5rem;
-  margin: 50px;
   padding: 35px 10px;
+  margin: 60px 10px; 
   border-radius: 50%;
   border: none;
+  background: black;
+  color: white;
 }
 
 .btn-form:hover {
   background: rgb(46, 137, 255);
-  box-shadow: 2px 2px 20px white;
+  box-shadow: 5px 5px 10px rgb(2, 2, 2);
   cursor: pointer;
   transform:translate(5px, 5px);
 }
@@ -315,6 +321,7 @@ textarea {
   }
   textarea {
     width: 80%;
+    height: 200px;
   }
   .labelcheck {
     left: 0px;
@@ -322,8 +329,12 @@ textarea {
   .case {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
+  }
+  .btn-form {
+    font-size:1rem;
+    padding: 28px 10px;
+    margin: 60px 5px; 
   }
 
 
@@ -335,6 +346,7 @@ textarea {
   }
   textarea {
     width: 90%;
+    height: 250px;
   }
 }
 
@@ -351,6 +363,11 @@ textarea {
   }
   textarea {
     width: 100%;
+  }
+  .btn-form {
+    font-size:0.7rem;
+    padding: 16px 5px;
+    margin: 60px 2px; 
   }
 }
 
